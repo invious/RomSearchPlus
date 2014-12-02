@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+android:id="@+id/romview_layout"
+android:layout_width="fill_parent" android:layout_height="fill_parent"
+xmlns:android="http://schemas.android.com/apk/res/android"
+>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/scrollv_romdetail"
+android:scrollbars="vertical"
+android:scrollbarStyle="outsideInset"
+android:layout_height="fill_parent"
+android:layout_width="fill_parent" >
+<RelativeLayout android:id="@+id/romview_innerlayout"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+	
+	<TextView android:id="@+id/rv_tv_romtitle" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="Super Mario Bros 3"
+		android:textSize="18sp" android:layout_alignParentLeft="true" />
+	<TextView android:id="@+id/rv_tv_detail2" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="TextView" android:textSize="14sp"
+		android:layout_below="@+id/rv_tv_detail1" android:layout_alignLeft="@+id/rv_tv_romtitle" />
+	<TextView android:id="@+id/rv_tv_detail1" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="TextView" android:textSize="14sp"
+		android:layout_below="@+id/rv_tv_romtitle" android:layout_alignLeft="@+id/rv_tv_romtitle" />
+	<TextView android:id="@+id/rv_tv_detail3" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="Country Code:" android:textSize="14sp"
+		android:layout_below="@+id/rv_tv_detail2" android:layout_alignLeft="@+id/rv_tv_romtitle" />
+
+	<TextView android:layout_below="@+id/rv_tv_detail3"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_alignLeft="@+id/rv_tv_romtitle" android:id="@+id/rv_tv_invisible1" />
+	
+	<TextView android:id="@+id/rv_tv_captcha" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="Captcha:"
+		android:layout_below="@+id/rv_tv_invisible1" android:layout_alignLeft="@+id/rv_tv_romtitle"
+		android:layout_alignParentLeft="true" />
+	
+	<ViewSwitcher android:id="@+id/rv_vs_captcha" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_below="@+id/rv_tv_invisible1"
+		android:layout_toRightOf="@+id/rv_tv_captcha" />
+	<TextView android:layout_below="@+id/rv_vs_captcha"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:id="@+id/rv_tv_scrshts" android:text="Screenshots: " />
+	<TextView android:id="@+id/rv_tv_addres" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_below="@+id/rv_vs_screenshots"
+		android:text="Additional Resources: " />
+	<ImageButton android:layout_below="@+id/rv_tv_addres"
+		android:baselineAlignBottom="false" android:scaleType="fitXY"
+		android:layout_height="75dip" android:layout_width="75dip" android:id="@+id/rv_imgbtn_goog"
+		android:src="@drawable/google_favicon" />
+	<ImageButton android:layout_below="@+id/rv_tv_addres"
+		android:layout_height="75dip" android:layout_width="75dip"
+		android:scaleType="fitXY" android:src="@drawable/wiki_favicon"
+		android:layout_toRightOf="@+id/rv_imgbtn_goog" android:id="@+id/rv_imgbtn_wiki" />
+	<ViewSwitcher android:layout_below="@+id/rv_tv_scrshts"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:id="@+id/rv_vs_screenshots" android:layout_centerHorizontal="true" />
+<ImageButton android:layout_below="@+id/rv_imgbtn_goog"
+		android:layout_height="75dip" android:layout_width="75dip"
+		android:scaleType="fitXY" android:src="@drawable/wiki_favicon"
+		android:layout_toRightOf="@+id/rv_imgbtn_goog" android:id="@+id/rv_imgbtn_invis" android:visibility="invisible"
+		/>
+	
+
+	<EditText android:id="@+id/rv_et_layoutglue" android:layout_width="215dip"
+		android:layout_height="40dip" android:text="Captcha" android:textSize="18sp"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentLeft="true"
+		android:visibility="invisible" />
+
+
+</RelativeLayout>
+</ScrollView>
+	<EditText android:id="@+id/rv_et_captcha" android:layout_width="215dip"
+		android:layout_height="40dip" android:hint="Enter captcha here" android:textSize="18sp"
+		android:maxLines="1"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentLeft="true" />
+
+	<Button android:id="@+id/rv_btn_dwnload" android:layout_width="105dip"
+		android:layout_height="40dip" android:text="Download"
+		android:layout_alignParentBottom="true" android:layout_alignParentRight="true"
+		android:layout_toRightOf="@+id/rv_et_captcha" />
+</RelativeLayout>
+

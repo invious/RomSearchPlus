@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string-array name="quotes"><item>Hello! You found my shop of strange and wonderful things!</item>
+<item>A WINNER IS YOU!</item>
+<item>See your face upon the clean water. How dirty! Come! Wash your face!</item>
+<item>BUY SOMETHIN\' WILL YA!</item>
+<item>I FEEL ASLEEP!!</item>
+<item>Hold RESET while you turn POWER off!</item>
+<item>FLY AWAY</item>
+<item>Get the Heck Out of Here, You Nerd</item>
+<item>congratulations your all mission is all over</item>
+
+<item>What\'s my grandson\'s name again?</item>
+
+<item>All your base</item>
+</string-array>
+<string-array name="doing"><item>finding MissingNo...</item>
+
+</string-array>
+</resources>

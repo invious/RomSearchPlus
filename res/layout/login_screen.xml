@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    >
+    <ScrollView android:id="@+id/loginScrollView"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent">
+    	<RelativeLayout 
+    		android:layout_width="fill_parent"
+    		android:layout_height="fill_parent"
+    		android:background="#ffffff">
+	    	
+	    	<ImageView 
+	    		android:id="@+id/ls_iv_logo"
+	    		android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+	    		android:layout_centerHorizontal="true"
+	    		android:layout_alignParentTop="true"
+	    		android:layout_marginTop="10px"
+	    		android:src="@drawable/rombay_logo"
+	    		/>
+	    	
+	   		<TextView 
+	   			android:id="@+id/ls_tv_please"
+	   			android:layout_width="wrap_content"
+	   			android:layout_height="wrap_content"
+	   			android:layout_centerHorizontal="true"
+	   			android:layout_below="@id/ls_iv_logo"
+	   			android:layout_marginTop="20px"
+	   			android:text="please login"
+	   			android:textColor="#9A9AFE"
+	   			/>
+	   		
+	  		<TextView 
+	  			android:id="@+id/ls_tv_email"
+	  			android:text="Username:"
+	  			android:layout_height="wrap_content"
+	  			android:layout_width="wrap_content"
+	  			android:layout_below="@id/ls_tv_please"
+	  			android:layout_marginTop="10px"
+	  			android:textColor="#9A9AFE"
+	  			/>
+	  		
+	   		<EditText 
+	 			android:id="@+id/ls_et_email"
+	 			android:layout_width="fill_parent"
+	 			android:layout_height="wrap_content"
+	 			android:layout_marginTop="5px"
+	 			android:layout_below="@id/ls_tv_email"
+	 			android:inputType="textEmailAddress"
+	 			/>
+	 		
+	 		<TextView 
+	 			android:id="@+id/ls_tv_password"
+	 			android:text="@string/password"
+	  			android:layout_height="wrap_content"
+	  			android:layout_width="wrap_content"
+	  			android:layout_below="@id/ls_et_email"
+	  			android:layout_marginTop="10px"
+	  			android:textColor="#9A9AFE"
+	 			/>
+	 		
+	 		<EditText 
+	 			android:id="@+id/ls_et_password"
+	 			android:layout_width="fill_parent"
+	 			android:layout_height="wrap_content"
+	 			android:layout_marginTop="5px"
+	 			android:layout_below="@id/ls_tv_password"
+	 			android:inputType="textPassword"
+	 			/>
+	 		
+	 		<CheckBox
+	 			android:id="@+id/ls_cb_savepassword"
+	 			android:layout_below="@id/ls_et_password"
+	 			android:layout_width="wrap_content"
+	 			android:layout_height="wrap_content"
+	 			android:text=" Save password"
+	 			android:textColor="#9A9AFE"
+	 			android:onClick="saveCheckOnClick"
+	 			/>
+	 		
+	 		<Button
+	 			android:id="@+id/ls_btn_login"
+	 			android:text="@string/login"
+	 			android:layout_width="180dip"
+	 			android:layout_height="wrap_content"
+	 			android:layout_below="@id/ls_cb_savepassword"
+	 			android:layout_marginTop="10px"
+	 			android:onClick="ls_btn_loginOnClick"
+	 			/>
+	 		<Button android:id="@+id/ls_btn_register"
+	 			android:text="@string/register"
+	 			android:layout_width="130dip"
+	 			android:layout_height="wrap_content"
+	 			android:layout_below="@+id/ls_cb_savepassword"
+	 			android:layout_toRightOf="@id/ls_btn_login"
+	 			android:layout_marginTop="10px"
+	 			android:onClick="registerOnClick"/>
+ 			</RelativeLayout>
+   	</ScrollView>
+</RelativeLayout>

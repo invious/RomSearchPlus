@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  
+   <PreferenceCategory android:title="User Experience">
+
+        <CheckBoxPreference
+                android:key="save_loc_check"
+                android:title="Custom save location"
+                android:defaultValue="false"
+                android:persistent="true"
+                android:summary="default /ROMS/" />
+
+        <EditTextPreference  android:dialogTitle="File Save Location"
+             android:dialogMessage="Where should extracted files be saved?"
+             android:dependency="save_loc_check"
+             android:key="save_loc_et"
+             android:persistent="true"
+             android:title="Choose Save Location"
+             android:summary="Summary"
+             android:defaultValue="/ROMS/"/>      
+                             
+                
+         <CheckBoxPreference
+           android:title="Universal Screenshot Library"
+           android:summary="Must restart for changes to take effect"
+           android:key="uss"
+           android:persistent="true"
+           android:defaultValue="true" />       
+                                               
+                
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="Experimental Features">
+           <CheckBoxPreference
+           android:title="More Consoles (Emuparadise)"
+           android:summary="Add GBA, PSX, etc. Buggy."
+           android:key="enableparadise"
+           android:persistent="true"
+           android:defaultValue="false" />
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="Useful Apps">
+    
+<PreferenceScreen android:title="Emulators">
+<Preference android:title="psx4droid" android:summary="Find psx4droid on the Market (PSX)" android:key="psx4droid" />
+<Preference android:title="Nesnoid" android:summary="Find Nesnoid on the Market (NES)" android:key="nesnoid" />
+<Preference android:title="SNesoid" android:summary="Find SNesoid on the Market (SNES)" android:key="snesoid" />
+<Preference android:title="GameBoid" android:summary="Find GameBoid on the Market (GBA)" android:key="gameboid" />
+<Preference android:title="GBCoid" android:summary="Find GBCoid on the Market (GBC)" android:key="gbcoid" />
+</PreferenceScreen>
+
+<PreferenceScreen android:title="Tools">
+<Preference android:title="unECM" android:summary="Convert .ecm files to .bin files" android:key="unecm" />
+<Preference android:title="Droid IPS (Rom Patcher)" android:summary="Patch ROMS and make entirely new games" android:key="ips" />
+<Preference android:title="SevenZip" android:summary="Unzip large .7z files" android:key="sevenzip" />
+<Preference android:title="androzip" android:summary="Unzip RAR, ZIP Files" android:key="androzip" />
+</PreferenceScreen>              
+
+  </PreferenceCategory>
+</PreferenceScreen>
